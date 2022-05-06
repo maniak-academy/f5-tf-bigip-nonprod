@@ -32,7 +32,7 @@ data "template_file" "init" {
   }
 }
 resource "bigip_do" "do-deploy" {
-  do_json    = data.template_file.init.rendered
+  do_json = data.template_file.init.rendered
 }
 
 

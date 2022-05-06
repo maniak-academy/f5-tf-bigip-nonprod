@@ -25,10 +25,15 @@ provider "bigip" {
 data "template_file" "init" {
   template = file("bigip.tpl")
   vars = {
-    HOSTNAME       = "bigip-nonprod.maniak.academy"
-    DNS_ADDRESS    = "1.1.1.1"
-    NTP_ADDRESS    = "8.8.8.8"
-    GUEST_PASSWORD = "W3lcome098!"
+    HOSTNAME         = "bigip-nonprod.maniak.academy"
+    DNS_ADDRESS      = "1.1.1.1"
+    NTP_ADDRESS      = "8.8.8.8"
+    GUEST_PASSWORD   = "W3lcome098!"
+    EXTERNAL_ADDRESS = "10.100.2.100/24"
+    EXTERNAL_VLAN_ID = "1"
+    INTERNAL_ADDRESS = "10.100.1.100/24"
+    INTERNAL_VLAN_ID = "2"
+    DEFAULT_ROUTE    = "10.100.1.1"
   }
 }
 resource "bigip_do" "do-deploy" {

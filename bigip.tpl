@@ -70,14 +70,14 @@
         },
         "external-self": {
             "class": "SelfIp",
-            "address": "10.10.1.100/24",
+            "address": "10.100.2.100/24",
             "vlan": "external",
             "allowService": "none",
             "trafficGroup": "traffic-group-local-only"
         },
         "default": {
             "class": "Route",
-            "gw": "10.10.1.1",
+            "gw": "10.100.1.1",
             "network": "default",
             "mtu": 1500
         },

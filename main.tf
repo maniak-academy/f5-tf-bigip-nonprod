@@ -33,7 +33,6 @@ data "template_file" "init" {
 }
 resource "bigip_do" "do-deploy" {
   do_json    = data.template_file.init.rendered
-  depends_on = [time_sleep.wait_30_seconds]
 }
 
 

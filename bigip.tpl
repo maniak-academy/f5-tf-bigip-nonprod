@@ -63,21 +63,21 @@
         },
         "internal-self": {
             "class": "SelfIp",
-            "address": "10.20.1.100/24",
+            "address": "${INTERNAL_ADDRESS}",
             "vlan": "internal",
             "allowService": "none",
             "trafficGroup": "traffic-group-local-only"
         },
         "external-self": {
             "class": "SelfIp",
-            "address": "10.100.2.100/24",
+            "address": "${EXTERNAL_ADDRESS}",
             "vlan": "external",
             "allowService": "none",
             "trafficGroup": "traffic-group-local-only"
         },
         "default": {
             "class": "Route",
-            "gw": "10.100.1.1",
+            "gw": "${DEFAULT_ROUTE}",
             "network": "default",
             "mtu": 1500
         },

@@ -63,7 +63,7 @@
         },
         "internal-self": {
             "class": "SelfIp",
-            "address": "10.100.1.100/24",
+            "address": "10.20.1.100/24",
             "vlan": "internal",
             "allowService": "none",
             "trafficGroup": "traffic-group-local-only"

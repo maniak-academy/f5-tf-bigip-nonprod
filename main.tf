@@ -21,7 +21,6 @@ provider "bigip" {
 }
 
 
-
 data "template_file" "init" {
   template = file("bigip.tpl")
   vars = {

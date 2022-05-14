@@ -39,7 +39,7 @@
        },
         "external": {
             "class": "VLAN",
-            "tag": 2,
+            "tag": "${EXTERNAL_VLAN_ID}",
             "mtu": 1500,
             "interfaces": [
                 {
@@ -51,7 +51,7 @@
         },
         "internal": {
             "class": "VLAN",
-            "tag": 1,
+            "tag": "${INTERNAL_VLAN_ID}",
             "mtu": 1500,
             "interfaces": [
                 {

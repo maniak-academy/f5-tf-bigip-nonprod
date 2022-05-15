@@ -34,7 +34,6 @@ data "template_file" "init" {
     INTERNAL_VLAN_ID = "2"
     DEFAULT_ROUTE    = "10.20.1.1"
     ALLOWED_IP       = "192.168.0.0/16"
-
   }
 }
 resource "bigip_do" "do-deploy" {

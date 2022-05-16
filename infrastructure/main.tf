@@ -8,7 +8,7 @@ terraform {
 }
 
 data "template_file" "init" {
-  template = file("bigip.tpl")
+  template = file("./infrastructure/bigip.tpl")
   vars = {
     HOSTNAME         = "bigip-nonprod.maniak.academy"
     DNS_ADDRESS      = "8.8.8.8"

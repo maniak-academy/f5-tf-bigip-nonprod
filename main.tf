@@ -19,3 +19,9 @@ module "infrastructure" {
 }
 
 
+provider "bigip" {
+  address  = var.bigipmgmt
+  username = var.bigipmgmtuser
+  password = var.bigippass
+}
+

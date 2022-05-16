@@ -10,16 +10,16 @@ terraform {
 data "template_file" "init" {
   template = file("./infrastructure/bigip.tpl")
   vars = {
-    HOSTNAME         = "bigip-nonprod.maniak.academy"
-    DNS_ADDRESS      = "8.8.8.8"
-    NTP_ADDRESS      = "1.1.1.1"
-    GUEST_PASSWORD   = "W3lcome098!"
-    EXTERNAL_ADDRESS = "10.20.1.100/24"
-    EXTERNAL_VLAN_ID = "1"
-    INTERNAL_ADDRESS = "10.10.1.100/24"
-    INTERNAL_VLAN_ID = "2"
-    DEFAULT_ROUTE    = "10.20.1.1"
-    ALLOWED_IP       = "192.168.0.0/16"
+    HOSTNAME         = var.HOSTNAME
+    DNS_ADDRESS      = var.DNS_ADDRESS
+    NTP_ADDRESS      = var.NTP_ADDRESS
+    GUEST_PASSWORD   = var.GUEST_PASSWORD
+    EXTERNAL_ADDRESS = var.EXTERNAL_ADDRESS
+    EXTERNAL_VLAN_ID = var.EXTERNAL_VLAN_ID
+    INTERNAL_ADDRESS = var.INTERNAL_ADDRESS
+    INTERNAL_VLAN_ID = var.INTERNAL_VLAN_ID
+    DEFAULT_ROUTE    = var.DEFAULT_ROUTE
+    ALLOWED_IP       = var.ALLOWED_IP
   }
 }
 resource "bigip_do" "do-deploy" {

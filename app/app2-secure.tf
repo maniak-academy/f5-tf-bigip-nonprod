@@ -3,7 +3,7 @@ data "template_file" "init" {
   vars = {
     UUID        = "uuid()"
     TENANT      = "tfc-secure-app"
-    VIP_ADDRESS = "10.10.50.1"
+    VIP_ADDRESS = "10.10.5.1"
   }
 }
 resource "bigip_as3" "as3-secure" {

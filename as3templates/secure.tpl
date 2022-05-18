@@ -28,9 +28,9 @@
           ],
           "members": [{
             "servicePort": 80,
-            "serverAddresses": [
-               "192.168.86.26"
-            ]
+            "addressDiscovery": "consul",
+            "updateInterval": 10,
+            "uri": "http://192.168.86.70:8500/v1/catalog/service/nginx?Passing"
           }]
         },
         "webtls": {

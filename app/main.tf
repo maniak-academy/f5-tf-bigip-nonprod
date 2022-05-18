@@ -18,5 +18,4 @@ data "template_file" "init" {
 }
 resource "bigip_as3" "as3-example" {
   as3_json      = data.template_file.init.rendered
-  tenant_filter = var.tenant
 }

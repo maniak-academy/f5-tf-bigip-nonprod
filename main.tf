@@ -17,6 +17,9 @@ terraform {
 module "infrastructure" {
   source = "./infrastructure"
 }
+module "app" {
+  source = "./app"
+}
 
 
 provider "bigip" {

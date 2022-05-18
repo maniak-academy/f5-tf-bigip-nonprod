@@ -1,13 +1,3 @@
-
-terraform {
-  required_providers {
-    bigip = {
-      source  = "F5Networks/bigip"
-      version = "1.13.1"
-    }
-  }
-}
-
 data "template_file" "init" {
   template = file("./as3templates/http.tpl")
   vars = {
@@ -17,5 +7,5 @@ data "template_file" "init" {
   }
 }
 resource "bigip_as3" "as3-example" {
-  as3_json      = data.template_file.init.rendered
+  as3_json = data.template_file.init.rendered
 }

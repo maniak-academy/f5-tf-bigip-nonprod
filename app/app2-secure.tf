@@ -1,5 +1,5 @@
 data "template_file" "init" {
-  template = file("./as3templates/https.tpl")
+  template = file("./as3templates/secure.tpl")
   vars = {
     UUID        = "uuid()"
     TENANT      = "tfc-secure-app"

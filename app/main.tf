@@ -9,7 +9,7 @@ terraform {
 }
 
 data "template_file" "init" {
-  template = file("./app/as3templates/as3.tpl")
+  template = file("./as3templates/http.tpl")
   vars = {
     UUID        = "uuid()"
     TENANT      = "tfc-workspace-demo"

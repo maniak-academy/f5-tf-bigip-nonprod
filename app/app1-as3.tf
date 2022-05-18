@@ -3,7 +3,7 @@ data "template_file" "init-as3" {
   vars = {
     UUID        = "uuid()"
     TENANT      = "tfc-workspace-demo"
-    VIP_ADDRESS = "10.10.4.1"
+    VIP_ADDRESS = "10.10.10.1"
   }
 }
 resource "bigip_as3" "as3-example" {

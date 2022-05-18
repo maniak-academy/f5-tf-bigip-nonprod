@@ -12,8 +12,8 @@ data "template_file" "init" {
   template = file("./as3templates/as3.tpl")
   vars = {
     UUID        = "uuid()"
-    TENANT      = var.tenant
-    VIP_ADDRESS = var.vip_address
+    TENANT      = "tfc-workspace-demo"
+    VIP_ADDRESS = "10.10.4.1"
   }
 }
 resource "bigip_as3" "as3-example" {

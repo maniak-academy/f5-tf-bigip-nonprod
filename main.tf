@@ -21,6 +21,10 @@ module "app" {
   source = "./app"
 }
 
+module "as3" {
+  source = "./as3"
+}
+
 
 provider "bigip" {
   address  = var.bigipmgmt

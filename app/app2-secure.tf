@@ -1,3 +1,16 @@
+
+provider "vault" {
+  address = "http://192.168.86.69:8200"
+  token   = "hvs.Wj7FJ8yYwUY8HrHGZGkrUB4x"
+}
+
+resource "vault_pki_secret_backend_cert" "app" {
+  backend     = "pki_int"
+  name        = "example-dot-com"
+  common_name = "test.example.com"
+}
+
+
 data "template_file" "init" {
   template = file("./as3templates/secure.tpl")
   vars = {

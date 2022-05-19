@@ -42,9 +42,9 @@
         "webcert": {
           "class": "Certificate",
           "remark": "in practice we recommend using a passphrase",
-          "certificate": "{${CERT} | toJSON | replaceAll "\"" "" }",
-          "privateKey": "{${KEY} | toJSON | replaceAll "\"" "" }",
-          "ca_chain": "{${CA_CHAIN} | toJSON | replaceAll "\"" "" }"
+          "certificate": "${CERT | toJSON | replaceAll "\"" "" }",
+          "privateKey": "${KEY | toJSON | replaceAll "\"" "" }",
+          "ca_chain": "${CA_CHAIN | toJSON | replaceAll "\"" "" }"
         }
       }
     }

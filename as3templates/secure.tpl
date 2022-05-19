@@ -1,3 +1,4 @@
+{{ with secret "pki_int/issue/example-dot-com" "common_name=test.example.com"}}
 {
   "class": "AS3",
   "action": "deploy",
@@ -42,11 +43,12 @@
         "webcert": {
           "class": "Certificate",
           "remark": "in practice we recommend using a passphrase",
-          "certificate": "${CERT}",
-          "privateKey": "${KEY}",
-          "chainCA": "${CA_CHAIN}"
+          "certificate": "{{ .Data.certificate | toJSON | replaceAll "\"" "" }}",
+          "privateKey": "{{ .Data.private_key | toJSON | replaceAll "\"" "" }}",
+          "chainCA": "{{ .Data.issuing_ca | toJSON | replaceAll "\"" "" }}"
         }
       }
     }
   }
 }
+{{ end }}

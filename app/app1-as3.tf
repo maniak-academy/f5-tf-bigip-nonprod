@@ -7,5 +7,5 @@ data "template_file" "app1" {
   }
 }
 resource "bigip_as3" "app1" {
-  as3_json = data.template_file.init-as3.rendered
+  as3_json = data.template_file.app1.rendered
 }

@@ -5,8 +5,8 @@
     "declaration": {
       "class": "ADC",
       "schemaVersion": "3.24.0",
-      "id": "tf-app0-sd",
-      "tf-app0-sd": {
+      "id": "tfc-app0-sd",
+      "tfc-app0-sd": {
         "class": "Tenant",
         "Nginx": {
           "class": "Application",

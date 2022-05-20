@@ -17,9 +17,9 @@ data "template_file" "init" {
     UUID        = "uuid()"
     TENANT      = "tfc-secure-app"
     VIP_ADDRESS = "10.10.5.1"
-    CERT        = "${vault_pki_secret_backend_cert.app.certificate}"
-    KEY         = "${vault_pki_secret_backend_cert.app.private_key}"
-    CA_CHAIN    = "${vault_pki_secret_backend_cert.app.ca_chain}"
+   # CERT        = "${vault_pki_secret_backend_cert.app.certificate}"
+   # KEY         = "${vault_pki_secret_backend_cert.app.private_key}"
+   # CA_CHAIN    = "${vault_pki_secret_backend_cert.app.ca_chain}"
   }
 }
 resource "bigip_as3" "as3-secure" {

@@ -13,9 +13,9 @@
           "template": "http",
           "serviceMain": {
             "class": "Service_HTTP",
-            "virtualPort": 8080,
+            "virtualPort": 80,
             "virtualAddresses": [
-              "10.0.0.200"
+              "10.10.4.10"
             ],
             "pool": "web_pool",
             "persistenceMethods": [],

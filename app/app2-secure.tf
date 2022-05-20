@@ -16,7 +16,7 @@ data "template_file" "app2" {
   vars = {
     UUID        = "uuid()"
     TENANT      = "tfc-app2-secure"
-    VIP_ADDRESS = "10.10.5.1"
+    VIP_ADDRESS = "10.10.2.1"
    # CERT        = "${vault_pki_secret_backend_cert.app.certificate}"
    # KEY         = "${vault_pki_secret_backend_cert.app.private_key}"
    # CA_CHAIN    = "${vault_pki_secret_backend_cert.app.ca_chain}"

@@ -47,6 +47,10 @@
           "certificate": "{{ .Data.certificate | toJSON | replaceAll "\"" "" }}",
           "privateKey": "{{ .Data.private_key | toJSON | replaceAll "\"" "" }}",
           "chainCA": "{{ .Data.issuing_ca | toJSON | replaceAll "\"" "" }}"
+
+          "certificate": "${CERT}",
+          "privateKey": "${KEY}",
+          "chainCA": "${CA_CHAIN}"
         }
       }
     }

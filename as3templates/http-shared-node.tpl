@@ -27,7 +27,7 @@
                ],
                "members": [{
                   "servicePort": 80,
-                  "shareNodes": "true",
+                  "shareNodes": true,
                   "serverAddresses": [
                      "192.168.86.48",
                      "192.168.86.52"

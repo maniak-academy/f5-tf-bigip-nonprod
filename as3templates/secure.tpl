@@ -48,6 +48,7 @@
             "ciphertext": "ZjVmNQ==",
             "protected": "eyJhbGciOiJkaXIiLCJlbmMiOiJub25lIn0"
           }
+        }
       }
     }
   }

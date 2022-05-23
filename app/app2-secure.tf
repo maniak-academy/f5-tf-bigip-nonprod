@@ -11,15 +11,16 @@ resource "vault_pki_secret_backend_cert" "app" {
 }
 
 
+
 data "template_file" "app2" {
   template = file("./as3templates/secure.tpl")
   vars = {
     UUID        = "uuid()"
     TENANT      = "tfc-app2-secure"
     VIP_ADDRESS = "10.10.2.1"
-    CERT        = jsonencode("${vault_pki_secret_backend_cert.app.certificate}")
-    KEY         = jsonencode("${vault_pki_secret_backend_cert.app.private_key}")
-    CA_CHAIN    = jsonencode("${vault_pki_secret_backend_cert.app.ca_chain}")
+    CERT        = jsonencode(vault_pki_secret_backend_cert.app.certificate)
+    KEY         = jsonencode(vault_pki_secret_backend_cert.app.private_key)
+    CA_CHAIN    = jsonencode(vault_pki_secret_backend_cert.app.ca_chain)
   }
 }
 resource "bigip_as3" "app2" {

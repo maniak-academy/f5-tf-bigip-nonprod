@@ -43,9 +43,9 @@
         "webcert": {
           "class": "Certificate",
           "remark": "in practice we recommend using a passphrase",
-          "certificate": "${CERT}",
-          "privateKey": "${KEY}",
-          "chainCA": "${CA_CHAIN}"
+          "certificate": ${CERT},
+          "privateKey": ${KEY},
+          "chainCA": ${CA_CHAIN}
         }
       }
     }

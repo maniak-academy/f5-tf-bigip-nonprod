@@ -12,9 +12,9 @@ resource "vault_pki_secret_backend_cert" "app" {
 
 
 
-# resource "bigip_as3" "app2" {
-#   as3_json = local.as3_json
-# }
+resource "bigip_as3" "app2" {
+  as3_json = local.as3_json
+}
 
 resource "local_file" "as3" {
   content  = local.as3_json

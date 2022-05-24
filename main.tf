@@ -22,9 +22,20 @@ module "app" {
   source = "./app"
 }
 
-# module "as3" {
-#   source = "./as3"
-# }
+
+module "app4" {
+  source       = "./app4"
+  tenant       = "app4"
+  vip_address  = "10.99.99.10"
+  common_name  = "test.example.com"
+  pki_name     = "example-dot-com"
+  pool_members = ["10.10.0.1", "10.10.0.2"]
+}
+
+provider "vault" {
+  address = var.vaultaddress
+  token   = var.vault_token
+}
 
 
 provider "bigip" {

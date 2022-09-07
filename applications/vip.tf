@@ -23,7 +23,7 @@ locals {
     SSL_PROFILE    = "${var.common_name}_ssl"
     TLS_CERT       = "${var.common_name}_cert"
     POOLMEMBERS_PORT = var.pool_members_port
-    MONITOR   = "var.monitor"
+    MONITOR         = var.monitor
     CERT           = jsonencode(vault_pki_secret_backend_cert.app.certificate)
     KEY            = jsonencode(vault_pki_secret_backend_cert.app.private_key)
     CA_CHAIN       = jsonencode(vault_pki_secret_backend_cert.app.ca_chain)

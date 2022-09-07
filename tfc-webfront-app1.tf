@@ -5,7 +5,7 @@ module "tfc-webfront-app1" {
   as3tmpl           = "https"
   vip_address       = "10.99.99.11"
   pki_name          = "example-dot-com"
-  pool_members_port = "443"
-  monitor           = "https"
+  pool_members_port = "80"
+  monitor           = "http"
   pool_members      = ["10.10.2.1", "10.10.2.2"]
 }

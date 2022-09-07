@@ -18,9 +18,9 @@ terraform {
 #  source = "./infrastructure"
 #}
 
-module "app" {
-  source = "./app"
-}
+# module "app" {
+#   source = "./app"
+# }
 
 # module "applications" {
 #   source       = "./applications"
@@ -32,10 +32,10 @@ module "app" {
 #   pool_members = ["10.10.0.1", "10.10.0.2"]
 # }
 
-provider "vault" {
-  address = var.vaultaddress
-  token   = var.vault_token
-}
+# provider "vault" {
+#   address = var.vaultaddress
+#   token   = var.vault_token
+# }
 
 
 provider "bigip" {

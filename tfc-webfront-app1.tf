@@ -7,5 +7,5 @@ module "tfc-webfront-app1" {
   pki_name          = "example-dot-com"
   pool_members_port = "80"
   monitor           = "http"
-  pool_members      = ["10.10.2.1", "10.10.2.2"]
+  pool_members      = ["10.10.10.1", "10.10.10.2"]
 }

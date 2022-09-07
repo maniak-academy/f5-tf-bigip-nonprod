@@ -24,10 +24,10 @@
           "class": "Pool",
           "loadBalancingMode": "predictive-node",
           "monitors": [
-            "http"
+            "${MONITOR}"
           ],
           "members": [{
-            "servicePort": 80,
+            "servicePort": ${POOLMEMBERS_PORT},
             "shareNodes": true,
             "serverAddresses": ${MY_POOLMEMBERS}
           }]

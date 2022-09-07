@@ -18,9 +18,9 @@ terraform {
 #  source = "./infrastructure"
 #}
 
-# module "app" {
-#   source = "./app"
-# }
+module "app" {
+  source = "./app"
+}
 
 # module "app5" {
 #   source       = "./app4"

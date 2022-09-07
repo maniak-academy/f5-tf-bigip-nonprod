@@ -15,10 +15,13 @@ resource "local_file" "as3" {
 }
 
 locals {
-  as3_json = templatefile("./as3templates/${as3tmpl}.tpl", {
+  as3_json = templatefile("./as3templates/${var.as3tmpl}.tpl", {
     TENANT         = var.tenant
     VIP_ADDRESS    = var.vip_address
+    POOL_NAME      = "${var.common_name}_pool"
     MY_POOLMEMBERS = jsonencode(var.pool_members)
+    SSL_PROFILE    = "${var.common_name}_ssl"
+    TLS_CERT       = "${var.common_name}_cert"
     CERT           = jsonencode(vault_pki_secret_backend_cert.app.certificate)
     KEY            = jsonencode(vault_pki_secret_backend_cert.app.private_key)
     CA_CHAIN       = jsonencode(vault_pki_secret_backend_cert.app.ca_chain)

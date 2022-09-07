@@ -17,10 +17,10 @@
           "virtualAddresses": [
              "${VIP_ADDRESS}"
           ],
-          "pool": "web_pool",
-          "serverTLS": "webtls"
+          "pool": "${POOL_NAME}",
+          "serverTLS": "${SSL_PROFILE}"
         },
-        "web_pool": {
+        "${POOL_NAME}": {
           "class": "Pool",
           "loadBalancingMode": "predictive-node",
           "monitors": [
@@ -32,13 +32,13 @@
             "serverAddresses": ${MY_POOLMEMBERS}
           }]
         },
-        "webtls": {
+        "${SSL_PROFILE}": {
           "class": "TLS_Server",
           "certificates": [{
-            "certificate": "webcert"
+            "certificate": "${TLS_CERT}"
           }]
         },
-        "webcert": {
+        "${TLS_CERT}": {
           "class": "Certificate",
           "remark": "in practice we recommend using a passphrase",
           "certificate": ${CERT},

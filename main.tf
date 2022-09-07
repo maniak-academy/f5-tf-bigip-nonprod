@@ -33,10 +33,10 @@ module "app" {
 
 module "applications" {
   source       = "./applications"
-  tenant       = "tf-nonprod-app1"
+  tenant       = "tfc-nonprod-app1"
+  common_name  = "test.example.com"
   as3tmpl      = "https"
   vip_address  = "10.99.99.10"
-  common_name  = "test.example.com"
   pki_name     = "example-dot-com"
   pool_members = ["10.10.0.1", "10.10.0.2"]
 }

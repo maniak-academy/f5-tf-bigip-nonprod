@@ -18,9 +18,9 @@ terraform {
 #  source = "./infrastructure"
 #}
 
-module "app" {
-  source = "./app"
-}
+# module "app" {
+#   source = "./app"
+# }
 
 # module "app5" {
 #   source       = "./app4"
@@ -31,15 +31,15 @@ module "app" {
 #   pool_members = ["10.10.0.3", "10.10.0.3"]
 # }
 
-module "applications" {
-  source       = "./applications"
-  tenant       = "tfc-nonprod-app1"
-  common_name  = "test.example.com"
-  as3tmpl      = "https"
-  vip_address  = "10.99.99.10"
-  pki_name     = "example-dot-com"
-  pool_members = ["10.10.0.1", "10.10.0.2"]
-}
+# module "applications" {
+#   source       = "./applications"
+#   tenant       = "tfc-nonprod-app1"
+#   common_name  = "test.example.com"
+#   as3tmpl      = "https"
+#   vip_address  = "10.99.99.10"
+#   pki_name     = "example-dot-com"
+#   pool_members = ["10.10.0.1", "10.10.0.2"]
+# }
 
 provider "vault" {
   address = var.vaultaddress

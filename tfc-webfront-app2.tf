@@ -1,4 +1,4 @@
-module "tfc-webfront-app1" {
+module "tfc-webfront-app2" {
   source       = "./applications"
   tenant       = "tfc-webfront-app2"
   common_name  = "webfrontapp2.example.com"

@@ -22,18 +22,19 @@ module "app" {
   source = "./app"
 }
 
-module "app5" {
-  source       = "./app4"
-  tenant       = "app5"
-  vip_address  = "10.99.99.11"
-  common_name  = "test.example.com"
-  pki_name     = "example-dot-com"
-  pool_members = ["10.10.0.3", "10.10.0.3"]
-}
+# module "app5" {
+#   source       = "./app4"
+#   tenant       = "app5"
+#   vip_address  = "10.99.99.11"
+#   common_name  = "test.example.com"
+#   pki_name     = "example-dot-com"
+#   pool_members = ["10.10.0.3", "10.10.0.3"]
+# }
 
-module "app4" {
-  source       = "./app4"
-  tenant       = "app4"
+module "applications" {
+  source       = "./applications"
+  tenant       = "tf-nonprod-app1"
+  as3tmpl      = "https"
   vip_address  = "10.99.99.10"
   common_name  = "test.example.com"
   pki_name     = "example-dot-com"

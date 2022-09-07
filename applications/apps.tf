@@ -15,7 +15,7 @@ resource "local_file" "as3" {
 }
 
 locals {
-  as3_json = templatefile("./as3templates/https.tpl", {
+  as3_json = templatefile("./as3templates/${as3tmpl}.tpl", {
     TENANT         = var.tenant
     VIP_ADDRESS    = var.vip_address
     MY_POOLMEMBERS = jsonencode(var.pool_members)

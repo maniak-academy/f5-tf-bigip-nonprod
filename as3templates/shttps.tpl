@@ -18,12 +18,28 @@
              "${VIP_ADDRESS}"
           ],
           "pool": "${POOL_NAME}",
+          "profileTCP": {
+            "use": "${TCP_PROFILE}"
+          },
+          "persistenceMethods": [
+            "cookie"
+          ],
+          "profileHTTP": {
+            "use": "${HTTP_PROFILE}"
+          },
           "serverTLS": "${SSL_PROFILE}",
-          "clientTLS": "/common/serverssl"
+          "clientTLS": {
+            "bigip":"/Common/serverssl"
+            }
+        },
+        "${PERSISTENCE}":{
+          "class": "Persist",
+          "persistenceMethod": "${PERSISTENCEMETHOD}",
+          "cookieName": "${DESCRIPTION}"
         },
         "${POOL_NAME}": {
           "class": "Pool",
-          "loadBalancingMode": "predictive-node",
+          "loadBalancingMode": "${LOADBALANCEMODE}",
           "monitors": [
             "${MONITOR}"
           ],
@@ -32,6 +48,15 @@
             "shareNodes": true,
             "serverAddresses": ${MY_POOLMEMBERS}
           }]
+        },
+        "${TCP_PROFILE}": {
+          "class": "TCP_Profile",
+          "idleTimeout": 300,
+          "closeWaitTimeout": 5
+        },
+        "${HTTP_PROFILE}": {
+          "class": "HTTP_Profile",
+          "xForwardedFor": true
         },
         "${SSL_PROFILE}": {
           "class": "TLS_Server",

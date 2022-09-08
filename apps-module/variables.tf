@@ -10,3 +10,9 @@ variable "pool_members_port" {
 variable "monitor" {
   default = "https"
 }
+variable "load_balancing_mode" {
+  default = "round-robin"
+}
+variable "persistence_method" {
+  default = "cookie"
+}

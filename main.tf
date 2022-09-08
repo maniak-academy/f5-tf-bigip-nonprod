@@ -19,7 +19,7 @@ module "infrastructure" {
 }
 
 provider "vault" {
-  address = var.vaultaddress
+  address = "http://192.168.86.69:8200"
   token   = var.vault_token
 }
 

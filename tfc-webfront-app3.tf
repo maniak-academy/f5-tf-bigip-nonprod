@@ -1,6 +1,6 @@
 module "tfc-webfront-app3" {
   source            = "./apps-module"
-  tenant            = "tfc-webfront-app2"
+  tenant            = "tfc-webfront-app3"
   common_name       = "webfront3.maniak.academy"
   as3tmpl           = "https"
   vip_address       = "10.99.99.14"

@@ -19,7 +19,7 @@
           ],
           "pool": "${POOL_NAME}",
           "serverTLS": "${SSL_PROFILE}",
-          "clientTLS": "/Common/clientssl"
+          "clientTLS": "/common/serverssl"
         },
         "${POOL_NAME}": {
           "class": "Pool",

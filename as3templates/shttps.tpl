@@ -21,9 +21,9 @@
           "profileTCP": {
             "use": "${TCP_PROFILE}"
           },
-          "persistenceMethods": [
-            "cookie"
-          ],
+          "persistenceMethods": [{
+            "use": "${PERSISTENCE}"
+          }],
           "profileHTTP": {
             "use": "${HTTP_PROFILE}"
           },

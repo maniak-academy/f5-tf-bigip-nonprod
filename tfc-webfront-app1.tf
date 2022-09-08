@@ -1,7 +1,3 @@
-## THe following is a Terraform configuration file for the TFC Web Frontend Application
-## This file is used to deploy the TFC Web Frontend Application to the BIG-IP
-#
-
 module "tfc-webfront-app1" {
   source            = "./apps-module"
   tenant            = "tfc-webfront-app1"

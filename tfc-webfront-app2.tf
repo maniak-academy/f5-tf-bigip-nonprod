@@ -1,5 +1,5 @@
 # module "tfc-webfront-app2" {
-#   source = "./vip-module"
+#   source            = "./apps-module"
 #   tenant            = "tfc-webfront-app2"
 #   common_name       = "webfrontapp2.example.com"
 #   as3tmpl           = "https"

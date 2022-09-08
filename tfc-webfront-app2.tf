@@ -7,5 +7,6 @@ module "tfc-backend-app2" {
   pki_name          = "example-dot-com"
   pool_members_port = "443"
   monitor           = "https"
+  load_balancing_mode = "least-connections-member"
   pool_members      = ["10.10.3.1", "10.10.3.2"]
 }

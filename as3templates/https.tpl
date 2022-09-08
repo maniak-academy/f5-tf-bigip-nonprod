@@ -22,7 +22,7 @@
         },
         "${POOL_NAME}": {
           "class": "Pool",
-          "loadBalancingMode": "predictive-node",
+          "loadBalancingMode": "${LOADBALANCEMODE}",
           "monitors": [
             "${MONITOR}"
           ],

@@ -9,14 +9,14 @@ terraform {
   required_providers {
     bigip = {
       source  = "F5Networks/bigip"
-      version = "1.13.1"
+      version = "1.15.1"
     }
   }
 }
 
-#module "infrastructure" {
-#  source = "./infrastructure"
-#}
+module "infrastructure" {
+ source = "./infrastructure"
+}
 
 # module "app" {
 #   source = "./app"
@@ -32,10 +32,10 @@ terraform {
 #   pool_members = ["10.10.0.1", "10.10.0.2"]
 # }
 
-# provider "vault" {
-#   address = var.vaultaddress
-#   token   = var.vault_token
-# }
+provider "vault" {
+  address = var.vaultaddress
+  token   = var.vault_token
+}
 
 
 provider "bigip" {

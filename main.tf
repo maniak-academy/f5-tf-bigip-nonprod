@@ -18,9 +18,9 @@ terraform {
   }
 }
 
-module "infrastructure" {
-  source = "./infrastructure"
-}
+# module "infrastructure" {
+#   source = "./infrastructure"
+# }
 
 provider "vault" {
   address = var.vaultaddress

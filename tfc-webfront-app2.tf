@@ -1,7 +1,7 @@
-module "tfc-webfront-app2" {
+module "tfc-backend-app1" {
   source            = "./apps-module"
-  tenant            = "tfc-webfront-app2"
-  common_name       = "webfrontapp2.maniak.academy"
+  tenant            = "tfc-backend-app1"
+  common_name       = "backendapp1.maniak.academy"
   as3tmpl           = "https"
   vip_address       = "10.99.99.12"
   pki_name          = "example-dot-com"

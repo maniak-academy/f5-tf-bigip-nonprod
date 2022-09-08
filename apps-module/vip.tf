@@ -18,6 +18,7 @@ locals {
   as3_json = templatefile("./as3templates/${var.as3tmpl}.tpl", {
     TENANT           = var.tenant
     VIP_ADDRESS      = var.vip_address
+    DESCRIPTION      = var.common_name
     POOL_NAME        = "${var.common_name}_pool"
     MY_POOLMEMBERS   = jsonencode(var.pool_members)
     SSL_PROFILE      = "${var.common_name}_ssl"

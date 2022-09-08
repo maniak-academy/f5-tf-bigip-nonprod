@@ -18,7 +18,8 @@
              "${VIP_ADDRESS}"
           ],
           "pool": "${POOL_NAME}",
-          "serverTLS": "${SSL_PROFILE}"
+          "serverTLS": "${SSL_PROFILE}",
+          "clientTLS": "Common/clientssl"
         },
         "${POOL_NAME}": {
           "class": "Pool",

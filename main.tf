@@ -14,9 +14,9 @@ terraform {
   }
 }
 
-module "infrastructure" {
-  source = "./infrastructure"
-}
+# module "infrastructure" {
+#   source = "./infrastructure"
+# }
 
 provider "vault" {
   address = "http://192.168.86.69:8200"

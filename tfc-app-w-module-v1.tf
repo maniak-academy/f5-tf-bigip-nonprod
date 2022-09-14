@@ -5,7 +5,7 @@ module "tfc-app-w-module-v1" {
   common_name         = "tfc-app-w-module-v1.maniak.academy"
   as3tmpl             = "shttps"
   vault_pki_backend   = "pki_int"
-  vip_address         = "10.99.101.22"
+  vip_address         = "10.99.101.26"
   pki_name            = "example-dot-com"
   pool_members_port   = "443"
   monitor             = "https"

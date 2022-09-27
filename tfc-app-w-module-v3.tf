@@ -1,4 +1,4 @@
-module "tfc-app-w-module-v1" {
+module "tfc-app-w-module-v3" {
   source              = "sebbycorp/app/bigip"
   version             = "1.0.5"
   tenant              = "tfc-app-w-module-v3"

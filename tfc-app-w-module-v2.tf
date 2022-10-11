@@ -6,7 +6,7 @@ module "tfc-app-w-module-v2" {
   as3tmpl             = "shttps"
   vault_pki_backend   = "pki_int"
   vip_address         = "10.99.111.22"
-  pki_name            = "example-dot-com"
+  pki_name            = "maniak-dot-academy"
   pool_members_port   = "443"
   monitor             = "https"
   load_balancing_mode = "least-connections-member"
